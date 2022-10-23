@@ -1,0 +1,23 @@
+#headerConteiner {
+  height: 8vh;
+  width: 100%;
+  position: sticky;
+  box-sizing: border-box;
+  top: 0;
+  background-color: var(--gray-10);
+  border-bottom: 2px solid var(--header-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#headerConteiner p {
+  color: var(--gray-1);
+}
+#headerConteiner ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3);
+}
