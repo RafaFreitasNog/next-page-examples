@@ -15,7 +15,3 @@ div #homeContent {
   color: var(--gray-1);
   margin-top: var(--space-2);
 }
-.red {
-  color: var(--red);
-  font-weight: 400;
-}

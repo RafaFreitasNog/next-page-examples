@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <Fragment>
-      <Header/>
+      <Header />
       <div id={styles.homeWrapper} >
         <div id={styles.homeContent}>
           <h1 className='bold' >Different page generations demo</h1>

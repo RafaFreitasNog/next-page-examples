@@ -7,10 +7,17 @@
   background-color: var(--gray-10);
   border-bottom: 2px solid var(--header-border);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: var(--space-3);
 }
-
+#headerConteiner h5 {
+  color: var(--gray-1);
+  font-weight: 900;
+  margin-left: 64px;
+  padding-right: var(--space-3);
+  border-right: 1px solid var(--gray-8);
+}
 #headerConteiner p {
   color: var(--gray-1);
 }
@@ -20,4 +27,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-3);
+}
+#headerConteiner li {
+  cursor: pointer;
 }

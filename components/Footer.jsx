@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import styles from '../styles/Footer.module.css'
+import styles from '../styles/components/Footer.module.css'
 
 function Footer() {
   return ( 
