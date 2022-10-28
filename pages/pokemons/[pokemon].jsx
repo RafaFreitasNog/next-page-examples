@@ -1,7 +1,26 @@
+import { useRouter } from "next/router";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import styles from '../../styles/Pokemonpage.module.css'
+
 function PokemonPage({ pokemonData }) {
+
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <h6>Loading...</h6>
+  }
+  
   return ( 
     <>
-    <h1>{pokemonData.name}</h1>
+    <Header />
+    <div className={styles.pageContent}>
+      <div className={styles.pokemonCard}>
+        <h6 className="bold" >{pokemonData.name}</h6>
+        <div style={{'background-image': `url(${pokemonData.sprites.front_default})` }} className={styles.imgConteiner}></div>
+      </div>
+    </div>
+    <Footer />
     </>
    );
 }
@@ -19,7 +38,7 @@ export async function getStaticPaths(params) {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 

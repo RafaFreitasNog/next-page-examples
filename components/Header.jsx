@@ -12,7 +12,8 @@ function Header() {
           <li><Link href="/ssg"><p>SSG</p></Link></li>
           <li><Link href="/ssr"><p>SSR</p></Link></li>
           <li><Link href="/csr"><p>CSR</p></Link></li>
-          <li><Link href="/poke-list"><p>CSR</p></Link></li>
+          <li><Link href="/poke-list"><p>Dynamic Routes</p></Link></li>
+          <li><Link href="/isr"><p>ISR</p></Link></li>
         </ul>
       </div>
     </Fragment>

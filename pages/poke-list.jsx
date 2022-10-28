@@ -9,10 +9,12 @@ function RepoList({ pokemons }) {
     <Header/>
     <div className={styles.pageWrapper}>
       <div className={styles.pageContent}>
+        <h1 className="bold">Static Generation with <span className="blue">Dynamic</span> Routing</h1>
+        <h6>Each one of this pokemons in the list has a static page generated at build time using the dynamic route <span className="blue">&apos;pokemon/[pokemon].js&apos;</span> with <span className="red">getStaticPaths</span> and <span className="red">getStaticProps</span>.</h6>
         <ul className={styles.pokemonList}>
           {pokemons.map((pokemon) => 
             <li key={pokemon.name}>
-              <Link href={`pokemons/${pokemon.name}`} ><h5>{pokemon.name}</h5></Link>
+              <Link href={`pokemons/${pokemon.name}`} ><p>{pokemon.name}</p></Link>
             </li>
           )}
         </ul>
