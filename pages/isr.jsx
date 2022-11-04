@@ -1,11 +1,8 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import styles from "../styles/Isr.module.css"
 
 function IncrementalStaticRegeneration({ date }) {
   return ( 
     <>
-    <Header/>
     <div className={styles.pageWrapper}>
         <div className={styles.pageContent}>
           <div className={styles.mainContent}>
@@ -17,7 +14,6 @@ function IncrementalStaticRegeneration({ date }) {
           </div>
         </div>
       </div>
-    <Footer/>
     </>
    );
 }

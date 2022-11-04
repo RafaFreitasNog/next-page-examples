@@ -1,12 +1,9 @@
 import Link from "next/link";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import styles from '../styles/Repo-list.module.css'
 
 function RepoList({ pokemons }) {
   return ( 
     <>
-    <Header/>
     <div className={styles.pageWrapper}>
       <div className={styles.pageContent}>
         <h1 className="bold">Static Generation with <span className="blue">Dynamic</span> Routing</h1>
@@ -20,7 +17,6 @@ function RepoList({ pokemons }) {
         </ul>
       </div>
     </div>
-    <Footer/>
     </>
    );
 }

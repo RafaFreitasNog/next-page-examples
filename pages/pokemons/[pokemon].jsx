@@ -1,6 +1,4 @@
 import { useRouter } from "next/router";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import styles from '../../styles/Pokemonpage.module.css'
 
 function PokemonPage({ pokemonData }) {
@@ -13,14 +11,12 @@ function PokemonPage({ pokemonData }) {
   
   return ( 
     <>
-    <Header />
     <div className={styles.pageContent}>
       <div className={styles.pokemonCard}>
         <h6 className="bold" >{pokemonData.name}</h6>
         <div style={{'background-image': `url(${pokemonData.sprites.front_default})` }} className={styles.imgConteiner}></div>
       </div>
     </div>
-    <Footer />
     </>
    );
 }

@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import styles from '../styles/Csr.module.css'
 
 function ClientSideRendering() {
@@ -14,7 +12,6 @@ function ClientSideRendering() {
 
   return ( 
     <>
-    <Header />
     <div className={styles.pageWrapper}>
         <div className={styles.pageContent}>
           <div className={styles.mainContent}>
@@ -26,7 +23,6 @@ function ClientSideRendering() {
           </div>
         </div>
       </div>
-    <Footer/>
     </>
    );
 }
