@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import StatBar from "../../components/StatBar";
 import styles from '../../styles/Pokemonpage.module.css'
 
 function PokemonPage({ pokemonData }) {
@@ -8,13 +9,21 @@ function PokemonPage({ pokemonData }) {
   if (router.isFallback) {
     return <h6>Loading...</h6>
   }
-  
+
   return ( 
     <>
     <div className={styles.pageContent}>
       <div className={styles.pokemonCard}>
         <h6 className="bold" >{pokemonData.name}</h6>
-        <div style={{'background-image': `url(${pokemonData.sprites.front_default})` }} className={styles.imgConteiner}></div>
+        <div style={{'backgroundImage': `url(${pokemonData.front_sprite})` }} className={styles.imgConteiner}></div>
+        <div className={styles.statList}>
+        {pokemonData.stats.map((element) =>
+          <StatBar
+          key={element.name}
+          name={element.name} 
+          base_stat={element.base_stat}/>
+          )}
+        </div>
       </div>
     </div>
     </>
@@ -41,7 +50,19 @@ export async function getStaticPaths(params) {
 export async function getStaticProps({ params }) {
   const { pokemon } = params
   const response = await fetch(`https://pokeapi.co/api/v2//pokemon/${pokemon}`)
-  const pokemonData = await response.json()
+  const data = await response.json()
+
+  const stats = data.stats.map((element) => {
+    return {
+      name: element.stat.name,
+      base_stat: element.base_stat,
+    }
+  })
+  const pokemonData = {
+    name: data.name,
+    front_sprite: data.sprites.front_default,
+    stats
+  }
 
   return {
     props: {

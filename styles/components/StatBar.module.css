@@ -1,0 +1,9 @@
+.barConteiner {
+  width: 100%;
+  background-color: var(--yellow);
+  margin: 6px 0 12px;
+}
+.barStat {
+  height: 12px;
+  background-color: var(--green-2);
+}
