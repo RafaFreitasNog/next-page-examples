@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import PokemonCardSke from "../../components/PokemonCardSke";
 import StatBar from "../../components/StatBar";
 import styles from '../../styles/Pokemonpage.module.css'
 
@@ -7,7 +8,7 @@ function PokemonPage({ pokemonData }) {
   const router = useRouter()
 
   if (router.isFallback) {
-    return <h6>Loading...</h6>
+    return <PokemonCardSke />
   }
 
   return ( 
