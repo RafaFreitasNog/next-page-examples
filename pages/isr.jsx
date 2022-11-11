@@ -10,7 +10,7 @@ function IncrementalStaticRegeneration({ date }) {
             <h4 className="bold">{date}</h4>
             <p>refresh to see the changes</p>
             <h6>The <span className="red">ISR (Incremental Static Regeneration)</span> method works just like the Static Site Generation, as the page is statically generated at build time. With the difference beeing the <span className="red">revalidate</span> property informed at <span className="blue">getStaticProps</span></h6>
-            <h6>You can specify a time in seconds in wich the page should regenerate, in this case 60 seconds. Every time 60 seconds passes, it fetches the data in getStaticProps again and generates a new static version of itself.</h6>
+            <h6>You can specify a time in seconds in which the page should stale, in this case 60 seconds. After 60 seconds have passed since the last version was generated and a new request comes in, it fetches the data in getStaticProps again and generates a new static version of itself.</h6>
           </div>
         </div>
       </div>

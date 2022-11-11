@@ -1,4 +1,11 @@
 #footerWrapper {
   height: 30vh;
   background-color: var(--gray-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+#footerWrapper > p {
+  color: var(--gray-3);
 }
