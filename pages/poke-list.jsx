@@ -15,7 +15,7 @@ function RepoList({ pokemons }) {
             </li>
           )}
         </ul>
-        <h6>The <span className="blue">'/pokemons/[pokemon]'</span> page also uses <span className="red">'fallback: true'</span>. So if you type any valid name value for [pokemon] (ex: 'pokemons/pikachu'), even if it hasn't been already statically generated at build time, a new static page will be generated and cached for that value.</h6>
+        <h6>The <span className="blue">&apos;/pokemons/[pokemon]&apos;</span> page also uses <span className="red">&apos;fallback: true&apos;</span>. So if you type any valid name value for [pokemon] (ex: &apos;pokemons/pikachu&apos;), even if it hasn&apos;t been already statically generated at build time, a new static page will be generated and cached for that value.</h6>
       </div>
     </div>
     </>

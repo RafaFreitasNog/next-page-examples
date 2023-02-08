@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { Fragment } from "react";
 import styles from '../styles/components/Header.module.css'
 
 function Header() {
   return ( 
-    <Fragment>
+    <>
       <div id={styles.headerConteiner}>
         <h5>PGEN</h5>
         <ul>
@@ -16,7 +15,7 @@ function Header() {
           <li><Link href="/isr"><p>ISR</p></Link></li>
         </ul>
       </div>
-    </Fragment>
+    </>
    );
 }
 

@@ -2,10 +2,6 @@ import styles from '../styles/Ssr.module.css'
 
 function ServerSideRendering({ date }) {
 
-  if (router.isFallback) {
-    return <h6>Loading...</h6>
-  }
-
   return ( 
     <>
       <div className={styles.pageWrapper}>

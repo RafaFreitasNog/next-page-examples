@@ -50,7 +50,7 @@ export async function getStaticPaths(params) {
 
 export async function getStaticProps({ params }) {
   const { pokemon } = params
-  const response = await fetch(`https://pokeapi.co/api/v2//pokemon/${pokemon}`)
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
   const data = await response.json()
 
   const stats = data.stats.map((element) => {
